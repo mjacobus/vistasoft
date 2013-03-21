@@ -1,4 +1,7 @@
 require 'vistasoft'
+require 'savon'
+
+Dir["./spec/support/**/*.rb"].each {|f| require f}
 
 RSpec.configure do |config|
 
@@ -6,7 +9,7 @@ end
 
 def busca_imoveis_params
   {
-    'key'        => 'thekey',
+    'key'        => VISTA_CUSTOMER_KEY,
     'module'     => 'imoveis',
     'method'     => 'busca_imoveis',
     'field'      => {
@@ -32,4 +35,8 @@ end
 
 def test_builder
   Builder::XmlMarkup.new(indent: 2)
+end
+
+def xml_request_message(params = {})
+  Vistasoft::Soap::XmlRequestMessage.new(params)
 end

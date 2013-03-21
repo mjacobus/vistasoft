@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://soap.imo.bi/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns2="http://xml.apache.org/xml-soap" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+    <SOAP-ENV:Body>
+        <ns1:getResponse>
+            <return xsi:type="ns2:Map">
+                <item>
+                    <key xsi:type="xsd:int">0</key>
+                    <value xsi:type="ns2:Map">
+                        <item>
+                            <key xsi:type="xsd:string">Codigo</key>
+                            <value xsi:type="xsd:string">3</value>
+                        </item>
+                        <item>
+                            <key xsi:type="xsd:string">Categoria</key>
+                            <value xsi:type="xsd:string">Apartamentos</value>
+                        </item>
+                        <item>
+                            <key xsi:type="xsd:string">Valor</key>
+                            <value xsi:type="xsd:string"></value>
+                        </item>
+                        <item>
+                            <key xsi:type="xsd:string">Cidade</key>
+                            <value xsi:type="xsd:string">Porto Alegre</value>
+                        </item>
+                        <item>
+                            <key xsi:type="xsd:string">Bairro</key>
+                            <value xsi:type="xsd:string">Bairro Remover</value>
+                        </item>
+                        <item>
+                            <key xsi:type="xsd:string">Dormitorios</key>
+                            <value xsi:type="xsd:string">5</value>
+                        </item>
+                        <item>
+                            <key xsi:type="xsd:string">NumeroVagas</key>
+                            <value xsi:type="xsd:string"></value>
+                        </item>
+                        <item>
+                            <key xsi:type="xsd:string">Foto</key>
+                            <value xsi:type="xsd:string">i_9586_3_ceb68.jpg</value>
+                        </item>
+                        <item>
+                            <key xsi:type="xsd:string">Url</key>
+                            <value xsi:type="xsd:string">http://strg-rse.vistahosting.com.br/wx4imove/vista.imobi/fotos/</value>
+                        </item>
+                        <item>
+                            <key xsi:type="xsd:string">Descricao</key>
+                            <value xsi:type="xsd:string"></value>
+                        </item>
+                    </value>
+                </item>
+                <item>
+                    <key xsi:type="xsd:int">1</key>
+                    <value xsi:type="ns2:Map">
+                        <item>
+                            <key xsi:type="xsd:string">Codigo</key>
+                            <value xsi:type="xsd:string">4</value>
+                        </item>
+                        <item>
+                            <key xsi:type="xsd:string">Categoria</key>
+                            <value xsi:type="xsd:string">Apartamentos</value>
+                        </item>
+                        <item>
+                            <key xsi:type="xsd:string">Valor</key>
+                            <value xsi:type="xsd:string"></value>
+                        </item>
+                        <item>
+                            <key xsi:type="xsd:string">Cidade</key>
+                            <value xsi:type="xsd:string">Porto Alegre</value>
+                        </item>
+                        <item>
+                            <key xsi:type="xsd:string">Bairro</key>
+                            <value xsi:type="xsd:string"></value>
+                        </item>
+                        <item>
+                            <key xsi:type="xsd:string">Dormitorios</key>
+                            <value xsi:type="xsd:string">4</value>
+                        </item>
+                        <item>
+                            <key xsi:type="xsd:string">NumeroVagas</key>
+                            <value xsi:type="xsd:string"></value>
+                        </item>
+                        <item>
+                            <key xsi:type="xsd:string">Foto</key>
+                            <value xsi:type="xsd:string"></value>
+                        </item>
+                        <item>
+                            <key xsi:type="xsd:string">Url</key>
+                            <value xsi:type="xsd:string">http://strg-rse.vistahosting.com.br/wx4imove/vista.imobi/fotos/</value>
+                        </item>
+                        <item>
+                            <key xsi:type="xsd:string">Descricao</key>
+                            <value xsi:type="xsd:string"></value>
+                        </item>
+                    </value>
+                </item>
+                <item>
+                    <key xsi:type="xsd:int">2</key>
+                    <value xsi:type="ns2:Map">
+                        <item>
+                            <key xsi:type="xsd:string">Codigo</key>
+                            <value xsi:type="xsd:string">5</value>
+                        </item>
+                        <item>
+                            <key xsi:type="xsd:string">Categoria</key>
+                            <value xsi:type="xsd:string">Empreendimento</value>
+                        </item>
+                        <item>
+                            <key xsi:type="xsd:string">Valor</key>
+                            <value xsi:type="xsd:string"></value>
+                        </item>
+                        <item>
+                            <key xsi:type="xsd:string">Cidade</key>
+                            <value xsi:type="xsd:string">Porto Alegre</value>
+                        </item>
+                        <item>
+                            <key xsi:type="xsd:string">Bairro</key>
+                            <value xsi:type="xsd:string"></value>
+                        </item>
+                        <item>
+                            <key xsi:type="xsd:string">Dormitorios</key>
+                            <value xsi:type="xsd:string"></value>
+                        </item>
+                        <item>
+                            <key xsi:type="xsd:string">NumeroVagas</key>
+                            <value xsi:type="xsd:string"></value>
+                        </item>
+                        <item>
+                            <key xsi:type="xsd:string">Foto</key>
+                            <value xsi:type="xsd:string"></value>
+                        </item>
+                        <item>
+                            <key xsi:type="xsd:string">Url</key>
+                            <value xsi:type="xsd:string">http://strg-rse.vistahosting.com.br/wx4imove/vista.imobi/fotos/</value>
+                        </item>
+                        <item>
+                            <key xsi:type="xsd:string">Descricao</key>
+                            <value xsi:type="xsd:string"></value>
+                        </item>
+                    </value>
+                </item>
+                <item>
+                    <key xsi:type="xsd:string">total_registros</key>
+                    <value xsi:type="xsd:int">3</value>
+                </item>
+            </return>
+        </ns1:getResponse>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
