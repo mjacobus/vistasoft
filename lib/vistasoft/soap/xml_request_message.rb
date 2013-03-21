@@ -2,7 +2,7 @@ require 'builder'
 
 module Vistasoft
   module Soap
-    class XmlRequest
+    class XmlRequestMessage
       attr_reader :builder, :params
 
       def initialize(params = {}, builder = Builder::XmlMarkup.new)

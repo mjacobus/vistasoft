@@ -1,10 +1,10 @@
 require 'spec_helper'
 
-describe Vistasoft::Soap::XmlRequest do
+describe Vistasoft::Soap::XmlRequestMessage do
   its(:builder) { should be_a(Builder::XmlMarkup) }
 end
 
-describe Vistasoft::Soap::XmlRequest, "#to_s", "with simple params" do
+describe Vistasoft::Soap::XmlRequestMessage, "#to_s", "with simple params" do
   let(:xml_body) do
     <<-eos
 <param0 xsi:type="ns2:Map">
@@ -26,7 +26,7 @@ eos
 end
 
 
-describe Vistasoft::Soap::XmlRequest, "#to_s", "with nested params" do
+describe Vistasoft::Soap::XmlRequestMessage, "#to_s", "with nested params" do
   let(:xml_body) do
     <<-eos
 <param0 xsi:type="ns2:Map">

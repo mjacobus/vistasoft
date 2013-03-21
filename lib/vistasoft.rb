@@ -1,5 +1,5 @@
 module Vistasoft
   module Soap
-    autoload :XmlRequest, 'vistasoft/soap/xml_request'
+    autoload :XmlRequestMessage, 'vistasoft/soap/xml_request_message'
   end
 end
