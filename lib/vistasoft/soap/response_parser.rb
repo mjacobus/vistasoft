@@ -16,7 +16,7 @@ module Vistasoft
         if hash.respond_to?(:include?) && hash.include?(:item)
           parse_response_hash(hash)
         else
-          raise ResponseError(hash)
+          raise ResponseError.new(hash)
         end
       end
 
