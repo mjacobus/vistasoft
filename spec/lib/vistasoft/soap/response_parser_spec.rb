@@ -64,6 +64,27 @@ describe Vistasoft::Soap::ResponseParser, '#parse' do
 end
 
 
+describe Vistasoft::Soap::ResponseParser, '#parse', "with array response" do
+  include Savon::SpecHelper
+  before(:all) { savon.mock!   }
+  after(:all)  { savon.unmock! }
+
+  let(:response) do
+    params = busca_imoveis_params
+    fixture = File.read("spec/fixtures/lista_itens_filtro_response.xml")
+    xml = xml_request_message(params).to_s
+    savon.expects(:get).with(message: xml).returns(fixture)
+    Vistasoft::Soap::Service.new(params).call
+  end
+
+  let(:parsed) { ["Bairro Remover", "HIGIENOPOLIS"] }
+
+  it "parses response and returns it as a hash" do
+    subject.parse(response).should eq(parsed)
+  end
+end
+
+
 describe Vistasoft::Soap::ResponseParser, "#parse_response_hash" do
   let(:hash) do
     {:item => [
@@ -102,6 +123,23 @@ describe Vistasoft::Soap::ResponseParser, "#parse_response_hash" do
 
   it "parses hash" do
     Vistasoft::Soap::ResponseParser.new.parse_response_hash(hash).should eq(parsed)
+  end
+end
+
+
+describe Vistasoft::Soap::ResponseParser, "#parse_array" do
+  let(:array) do
+    {
+      :item=> ["Bairro Remover", "HIGIENOPOLIS"],
+      :"@soap_enc:array_type"=>"xsd:string[2]",
+      :"@xsi:type"=>"SOAP-ENC:Array"
+    }
+  end
+
+  let(:parsed) { ["Bairro Remover", "HIGIENOPOLIS"] }
+
+  it "parses map" do
+    Vistasoft::Soap::ResponseParser.new.parse_array(array).should eq(parsed)
   end
 end
 
@@ -147,5 +185,9 @@ describe Vistasoft::Soap::ResponseParser, "#value_type" do
 
   it "recognizes :map type" do
     Vistasoft::Soap::ResponseParser.new.value_type({:"@xsi:type"=>"ns2:Map"}).should eq(:map)
+  end
+
+  it "recognizes :array type" do
+    Vistasoft::Soap::ResponseParser.new.value_type({:"@xsi:type"=>"SOAP-ENC:Array"}).should eq(:array)
   end
 end

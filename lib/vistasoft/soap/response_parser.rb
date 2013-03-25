@@ -5,20 +5,26 @@ module Vistasoft
       VALUE_TYPES = {
         "ns2:Map"    => :map,
         "xsd:string" => :nil,
+        'SOAP-ENC:Array' => :array
       }
 
       #
       # @param Savon::Response
       # @return Hash
       def parse(response)
-        hash = response.to_hash[:get_response][:return]
-
-        if hash.respond_to?(:include?) && hash.include?(:item)
-          parse_response_hash(hash)
-        else
-          raise ResponseError.new(hash)
+        begin
+          hash = response.to_hash[:get_response][:return]
+          puts "#{value_type(hash)} : #{hash.inspect} \n\n----\n\n"
+          if value_type(hash) == :array
+            parse_array(hash)
+          else
+            parse_response_hash(hash)
+          end
+        rescue Exception => e
+          raise ResponseError.new("Could not parase response #{hash.inspect}. Error: #{e.class}: (#{e.message})")
         end
       end
+
 
       def parse_map(map)
         parsed = {}
@@ -33,6 +39,10 @@ module Vistasoft
           parsed[item[:key]] = value
         end
         parsed
+      end
+
+      def parse_array(array)
+        array[:item]
       end
 
 
