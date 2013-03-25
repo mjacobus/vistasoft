@@ -2,7 +2,6 @@ lib = File.expand_path("../lib", __FILE__)
 $:.unshift lib unless $:.include? lib
 
 require 'vistasoft/version'
-require 'rspec/autorun'
 
 Gem::Specification.new do |s|
   s.name        = 'vistasoft'

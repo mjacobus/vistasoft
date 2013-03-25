@@ -147,3 +147,6 @@ params = {
 response = Vistasoft::Soap::Service.new(params).call
 Vistasoft::Soap::ResponseParser.new.parse(response) # ['Centro', 'Higienopolis']
 ```
+
+### Method: listar_documentos
+Not working by the time of plugin development.
