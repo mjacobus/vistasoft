@@ -4,10 +4,11 @@ module Vistasoft
       class Picture < Base
 
         ATTRIBUTES = [
-          :code,
-          :picture,
           :base_url,
-          :date
+          :code,
+          :date,
+          :description,
+          :picture
         ]
 
         def picture_url
