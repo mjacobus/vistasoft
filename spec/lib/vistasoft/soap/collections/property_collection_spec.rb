@@ -22,9 +22,9 @@ describe Vistasoft::Soap::Collections::PropertyCollection, '.factory' do
     }
   end
 
-  let(:params) { { "0" =>  prop1, "total_registros" => "2" } }
+  let(:params) { { "0" =>  prop1, "total_registros" => "1" } }
 
-  it "instantiates new Properyt" do
+  it "instantiates new Property" do
     Vistasoft::Soap::Models::Property.should_receive(:new).with(prop1)
     Vistasoft::Soap::Collections::PropertyCollection.factory(params)
   end
