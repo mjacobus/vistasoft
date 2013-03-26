@@ -5,7 +5,7 @@ module Vistasoft
 
         ATTRIBUTES = [
           :base_url,
-          :code,
+          :vista_id,
           :date,
           :description,
           :picture

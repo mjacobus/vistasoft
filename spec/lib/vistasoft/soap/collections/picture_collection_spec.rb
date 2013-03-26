@@ -9,7 +9,7 @@ end
 describe Vistasoft::Soap::Collections::PictureCollection, '.factory' do
   let(:pic1) do
     {
-      'code' => '1',
+      'vista_id' => '1',
       'picture' => 'name.jpg',
       'base_url' => 'http://base/',
       'date' => '2013-12-01'
