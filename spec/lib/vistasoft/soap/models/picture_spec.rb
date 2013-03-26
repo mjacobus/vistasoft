@@ -30,3 +30,8 @@ describe Vistasoft::Soap::Models::Picture, "#initialize" do
     end
   end
 end
+
+describe Vistasoft::Soap::Models::Picture, "#picture_url" do
+  subject { described_class.new({picture: 'picture.png', base_url: 'http://base/'}) }
+  its(:picture_url) { should eq('http://base/picture.png') }
+end

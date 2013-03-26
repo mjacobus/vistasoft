@@ -10,6 +10,10 @@ module Vistasoft
           :date
         ]
 
+        def picture_url
+          base_url + picture
+        end
+
       end # Picture
     end
   end
