@@ -14,7 +14,6 @@ module Vistasoft
       def parse(response)
         begin
           hash = response.to_hash[:get_response][:return]
-          puts "#{value_type(hash)} : #{hash.inspect} \n\n----\n\n"
           if value_type(hash) == :array
             parse_array(hash)
           else
