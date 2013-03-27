@@ -6,13 +6,18 @@ module Vistasoft
         ATTRIBUTES = [
           :area,
           :bedrooms,
+          :build_size,
           :category,
           :city,
           :description,
           :garages,
           :picture,
           :picture_url,
+          :plot_size,
           :price,
+          :purpose,
+          :status,
+          :suites,
           :vista_id
         ]
 
