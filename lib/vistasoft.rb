@@ -1,6 +1,7 @@
 module Vistasoft
   module Soap
     autoload :InvalidAttributeError, 'vistasoft/soap/invalid_attribute_error'
+    autoload :Model,                 'vistasoft/soap/model'
     autoload :ResponseError,         'vistasoft/soap/response_error'
     autoload :ResponseParser,        'vistasoft/soap/response_parser'
     autoload :Service,               'vistasoft/soap/service'
