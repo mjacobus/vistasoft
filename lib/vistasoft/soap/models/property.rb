@@ -10,6 +10,7 @@ module Vistasoft
           :category,
           :city,
           :description,
+          :empreendimento,
           :garages,
           :picture,
           :picture_url,
@@ -18,6 +19,7 @@ module Vistasoft
           :purpose,
           :status,
           :suites,
+          :title,
           :vista_id
         ]
 
