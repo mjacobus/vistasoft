@@ -15,6 +15,7 @@ module Vistasoft
 
     module Collections
       autoload :Base,               'vistasoft/soap/collections/base'
+      autoload :ModelCollection,    'vistasoft/soap/collections/model_collection'
       autoload :PictureCollection,  'vistasoft/soap/collections/picture_collection'
       autoload :PropertyCollection, 'vistasoft/soap/collections/property_collection'
     end

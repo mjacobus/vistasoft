@@ -2,7 +2,6 @@ PATH
   remote: .
   specs:
     vistasoft (0.1)
-      active_support
       savon (~> 2)
 
 GEM
@@ -75,6 +74,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_support
   guard-rspec
   rb-inotify
   rspec
