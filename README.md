@@ -2,9 +2,7 @@
 
 The ruby API for accessing the vistasoft SOAP interface.
 [VistSoft.com.br](http://vistasoft.com.br/)
-## See the soap specification
-
-[Soap Specification](http://www.vistasoft.com.br/download/RQV_035%20-%20Integra%C3%A7%C3%A3o%20dos%20Im%C3%B3veis%20no%20Website%20ver2_rev01.pdf)
+See Vista's [Soap Specification](http://www.vistasoft.com.br/download/RQV_035%20-%20Integra%C3%A7%C3%A3o%20dos%20Im%C3%B3veis%20no%20Website%20ver2_rev01.pdf)
 
 ## Usage example
 ### Method: busca_imoveis
@@ -65,54 +63,64 @@ parsed_response = Vistasoft::Soap::ResponseParser.new.parse(response)
 #   "total_registros" => "2"
 # }
 
-# Vistasoft::Soap::Collections::PropertyCollection
-properties = Vistasoft::Soap::Collections::PropertyCollection.factory(parsed_response)
+# Vistasoft::Soap::Collections::ModelCollection
+collection = Vistasoft::Soap::Collections::ModelCollection.factory(parsed_response)
 
-# Vistasoft::Soap::Models::Property
-property = properties.first
+# Vistasoft::Soap::Model
+model = collection.first
 
-property.category # => Apartamentos
+model.category # => Apartamentos
 
 ```
 
 ### Method: busca_fotos
-```Ruby
+```ruby
 params = {
   'key'        => '{the client code}',
   'module'     => 'imoveis',
   'method'     => 'busca_fotos',
   'field'      => {
-    'CODIGO'    => 'Codigo',
-    'IMAGEM_P'  => 'Thumbnail',
-    'IMAGEM_G'  => 'Foto',
-    'URL_FOTO'  => 'Url',
-    'DESCRICAO' => 'Descricao'
+    'CODIGO'    => 'codigo',
+    'IMAGEM_P'  => 'thumb',
+    'IMAGEM_G'  => 'foto',
+    'URL_FOTO'  => 'url',
+    'DESCRICAO' => 'descricao'
   },
  'filter' => {
     # 'CODIGO' => 875
   }
 }
 
+# Savon::Response
 response = Vistasoft::Soap::Service.new(params).call
 
-parsed = Vistasoft::Soap::ResponseParser.new.parse(response)
+# Hash
+parsed_response = Vistasoft::Soap::ResponseParser.new.parse(response)
 
 # {
 #   "0"=> {
-#     "Codigo"=>"3",
-#     "Thumbnail"=>"i_9586_3_34f71_p.jpg",
-#     "Foto"=>"i_9586_3_ceb68.jpg",
-#     "Url"=>"http://strg-rse.vistahosting.com.br/wx4imove/vista.imobi/fotos/",
-#     "Descricao"=>false
+#     "codigo"=>"3",
+#     "thumb"=>"i_9586_3_34f71_p.jpg",
+#     "foto"=>"i_9586_3_ceb68.jpg",
+#     "url"=>"http://strg-rse.vistahosting.com.br/wx4imove/vista.imobi/fotos/",
+#     "descricao"=> 'Pretty, uh?'
 #   },
 #   "1"=> {
-#     "Codigo"=>"3",
-#     "Thumbnail"=>"i_9586_3_c4e6f_p.jpg",
-#     "Foto"=>"i_9586_3_6e8a6.jpg",
-#     "Url"=>"http://strg-rse.vistahosting.com.br/wx4imove/vista.imobi/fotos/",
-#     "Descricao"=>false
+#     "codigo"=>"3",
+#     "thumb"=>"i_9586_3_c4e6f_p.jpg",
+#     "foto"=>"i_9586_3_6e8a6.jpg",
+#     "url"=>"http://strg-rse.vistahosting.com.br/wx4imove/vista.imobi/fotos/",
+#     "descricao"=> 'Pretty, uh?'
 #   }
 # }
+
+# Vistasoft::Soap::Collections::ModelCollection
+collection = Vistasoft::Soap::Collections::ModelCollection.factory(parsed_response)
+
+# Vistasoft::Soap::Model
+model = collection.first
+
+model.descricao # => 'Pretty, uh?'
 
 ```
 
@@ -127,7 +135,9 @@ params = {
 }
 
 response = Vistasoft::Soap::Service.new(params).call
+
 Vistasoft::Soap::ResponseParser.new.parse(response) # not tested yet
+
 ```
 
 
@@ -145,7 +155,9 @@ params = {
 }
 
 response = Vistasoft::Soap::Service.new(params).call
+
 Vistasoft::Soap::ResponseParser.new.parse(response) # ['Centro', 'Higienopolis']
+
 ```
 
 ### Method: listar_documentos
