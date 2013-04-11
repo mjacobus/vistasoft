@@ -64,7 +64,7 @@ parsed_response = Vistasoft::Soap::ResponseParser.new.parse(response)
 # }
 
 # Vistasoft::Soap::Collections::ModelCollection
-collection = Vistasoft::Soap::Collections::ModelCollection.factory(parsed_response)
+collection = Vistasoft::Soap::Collection.factory(parsed_response, Vistasoft::Soap::Model)
 
 # Vistasoft::Soap::Model
 model = collection.first
@@ -115,7 +115,7 @@ parsed_response = Vistasoft::Soap::ResponseParser.new.parse(response)
 # }
 
 # Vistasoft::Soap::Collections::ModelCollection
-collection = Vistasoft::Soap::Collections::ModelCollection.factory(parsed_response)
+collection = Vistasoft::Soap::Collection.factory(parsed_response, Vistasoft::Soap::Model)
 
 # Vistasoft::Soap::Model
 model = collection.first
