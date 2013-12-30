@@ -9,10 +9,11 @@ Gem::Specification.new do |s|
   s.date        = '2013-03-21'
   s.summary     = "Integration with Vista SOAP web service"
   s.description = "Integration with Vista SOAP web service"
+  s.license     = "MIT"
+  s.homepage    = "https://github.com/mjacobus/vistasoft"
   s.authors     = ["Marcelo Jacobus"]
-  s.email       = 'marcelo.jacobus@gmail.com'
+  s.email       = "marcelo.jacobus@gmail.com"
   s.files       = ["lib/vistasoft.rb"]
-  # s.homepage
 
 
   s.add_dependency "savon", '~> 2'
