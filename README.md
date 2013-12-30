@@ -1,10 +1,30 @@
 # Vistasoft Soap API
 
+[![Build Status](https://travis-ci.org/mjacobus/vistasoft.png?branch=master)](https://travis-ci.org/mjacobus/vistasoft)
+[![Coverage Status](https://coveralls.io/repos/mjacobus/vistasoft/badge.png)](https://coveralls.io/r/mjacobus/vistasoft)
+[![Code Climate](https://codeclimate.com/github/mjacobus/vistasoft.png)](https://codeclimate.com/github/mjacobus/vistasoft)
+[![Dependency Status](https://gemnasium.com/mjacobus/vistasoft.png)](https://gemnasium.com/mjacobus/vistasoft)
+[![Gem Version](https://badge.fury.io/rb/vistasoft.png)](http://badge.fury.io/rb/vistasoft)
+
 The ruby API for accessing the vistasoft SOAP interface.
-[VistSoft.com.br](http://vistasoft.com.br/)
+[VistSoft.com.br](http://vistasoft.com.br/).
 See Vista's [Soap Specification](http://www.vistasoft.com.br/download/RQV_035%20-%20Integra%C3%A7%C3%A3o%20dos%20Im%C3%B3veis%20no%20Website%20ver2_rev01.pdf)
 
+
+## Instalation
+
+Add this line to your application's Gemfile:
+
+```ruby
+gem 'vistasoft'
+```
+
+And then execute:
+
+    $ bundle
+
 ## Usage example
+
 ### Method: busca_imoveis
 
 ```ruby
@@ -162,3 +182,18 @@ Vistasoft::Soap::ResponseParser.new.parse(response) # ['Centro', 'Higienopolis']
 
 ### Method: listar_documentos
 Not working by the time of plugin development.
+
+## Authors
+
+- [Marcelo Jacobus](https://github.com/mjacobus)
+
+
+## Contributing
+
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+**Do not forget to write tests**
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
+
