@@ -23,7 +23,7 @@ end
 
 def busca_imoveis_params
   {
-    'key'        => VISTA_CUSTOMER_KEY,
+    'key'        => 'fake_key',
     'module'     => 'imoveis',
     'method'     => 'busca_imoveis',
     'field'      => {
