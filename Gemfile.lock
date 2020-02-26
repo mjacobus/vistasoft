@@ -24,7 +24,7 @@ GEM
     diff-lcs (1.2.1)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
-    ffi (1.6.0)
+    ffi (1.11.1)
     guard (1.6.2)
       listen (>= 0.6.0)
       lumberjack (>= 1.0.2)
